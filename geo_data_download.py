@@ -1,7 +1,3 @@
-import geopandas as gpd
-import requests
-from io import BytesIO
-
 # Google Drive 파일 ID로 다운로드 URL 생성
 file_id = "164ypqgBqDYRChtcmTCI1daGQXZeNBw4d"
 download_url = f"https://drive.google.com/uc?export=download&id={file_id}"
