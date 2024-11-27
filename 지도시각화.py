@@ -13,7 +13,7 @@ gdf = gpd.read_file("C:/Users/김새난/data/BND_SIGUNGU_PG.json")
 
 # 출생률 데이터 로드
 df = pd.read_csv(
-    "C:/Users/김새난/Downloads/연령별_출산율_및_합계출산율_행정구역별__20241119164143.csv",
+    "C:/Users/김새난/data/연령별_출산율_및_합계출산율_행정구역별__20241119164143.csv",
     encoding='cp949',
     low_memory=False,
     header=1
