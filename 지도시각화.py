@@ -81,7 +81,7 @@ st_folium(m, width=700, height=500)
 top_3 = merged_gdf.nlargest(3, '합계출산율')
 bottom_3 = merged_gdf.nsmallest(3, '합계출산율')
 
-st.write("### 출산율 상위 3개 지역")
+st.write("### 출산율 상위 지역")
 st.dataframe(top_3[['행정구역', '합계출산율']])
 st.write("합계출산율이 높은 지역들은 대부분 전부 수도권 외의 지역이다. 모두 특별시, 특별자치시, 광역시에 해당하지 않으며 대부분 농촌지역이거나 인구밀도가 낮은 지역이다.")
 st.write("2023년 기준으로 전라남도가 합계출산율에서 전국 1위를 기록한 지역이다. (실제기사도 있음)")
