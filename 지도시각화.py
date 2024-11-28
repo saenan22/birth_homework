@@ -88,8 +88,5 @@ st.write("2023년 기준으로 전라남도가 합계출산율에서 전국 1위
 
 st.write("### 출산율 하위  지역")
 st.dataframe(bottom_3[['행정구역', '합계출산율']])
-lowest_birth_rate = df.loc[df['출생률'].idxmin()]
-st.write(f"최하위 출생률을 가진 구: {lowest_birth_rate['시군구별']}")
-st.write(f"출생률: {lowest_birth_rate['합계출산율']}")
 st.write("합계출산율이 낮은 지역들은 부산광역시의 중구, 대구광역시의 서구를 제외하면 거의 모두 서울특별시의 지역이다.")
 st.write("합계출산율이 낮은 지역은 주로 인구 밀도가 높은 도시 지역이나, 인프라가 부족한 지역일 수 있습니다.")
