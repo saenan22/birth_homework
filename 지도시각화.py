@@ -12,9 +12,17 @@ st.text("C119180-김새난")  # 제목 위에 작은 텍스트 표시
 gdf = gpd.read_file("https://raw.githubusercontent.com/saenan22/birth_homework/main/BND_SIGUNGU_PG.json")
 
 # 출생률 데이터 로드
+
+from urllib.parse import quote
+
+# URL 인코딩 처리
+csv_url = "https://raw.githubusercontent.com/saenan22/birth_homework/main/연령별_출산율_및_합계출산율_행정구역별__20241119164143.csv"
+encoded_csv_url = quote(csv_url, safe=':/')
+
+# pandas로 CSV 읽기
 df = pd.read_csv(
-    "https://raw.githubusercontent.com/saenan22/birth_homework/main/연령별_출산율_및_합계출산율_행정구역별__20241119164143.csv",
-    encoding='cp949',
+    encoded_csv_url,
+    encoding='cp949',  # 필요 시 'utf-8'로 변경
     low_memory=False,
     header=1
 )
